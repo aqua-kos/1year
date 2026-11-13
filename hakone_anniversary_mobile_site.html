@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#172b2b">
+<title>HAKONE — Our First Anniversary</title>
+<style>
+:root{--ink:#203332;--deep:#172b2b;--sage:#788b7b;--cream:#f5f1e8;--paper:#fffdf8;--gold:#b99a63;--muted:#7b8580;--line:#e7e1d5;--rose:#b98278}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.65}
+a{color:inherit}.serif{font-family:"Bodoni 72","Times New Roman",serif;letter-spacing:.04em}
+.hero{min-height:88svh;background:linear-gradient(180deg,rgba(13,34,34,.22),rgba(13,34,34,.82)),radial-gradient(ellipse at 70% 28%,#b7c3b1 0%,#71877c 28%,#294a48 66%,#172b2b 100%);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:30px 25px 38px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:120vw;height:42vw;border:1px solid rgba(255,255,255,.22);border-radius:50%;left:-10vw;top:36%;transform:rotate(-9deg)}
+.hero:after{content:"";position:absolute;width:120vw;height:38vw;border:1px solid rgba(255,255,255,.15);border-radius:50%;left:-4vw;top:42%;transform:rotate(8deg)}
+.brand{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#e6d8b9;z-index:1}
+.hero-main{z-index:1;margin-top:auto;margin-bottom:auto}
+.eyebrow{font-size:10px;letter-spacing:.28em;color:#e6d8b9;text-transform:uppercase}
+h1{font-weight:400;font-size:clamp(48px,13vw,76px);line-height:.98;margin:16px 0 15px;letter-spacing:.015em}
+.hero-sub{font-size:13px;letter-spacing:.1em;color:#e7e9e1}
+.hero-date{z-index:1;border-top:1px solid rgba(255,255,255,.35);padding-top:17px;display:flex;justify-content:space-between;align-items:end;font-size:11px;letter-spacing:.1em;color:#e6e9e2}
+.hero-date strong{font-family:"Times New Roman",serif;font-size:24px;font-weight:400;letter-spacing:.05em;color:white}
+main{max-width:720px;margin:auto;padding:0 18px 60px}
+section{padding:46px 0 8px}
+.section-kicker{font-size:9px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+h2{font-family:"Times New Roman",serif;font-size:31px;font-weight:400;line-height:1.15;margin:7px 0 19px;color:var(--deep)}
+.intro{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:15px;line-height:2;color:#52635c}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.info{background:var(--paper);padding:15px;border:1px solid var(--line);min-height:100px}
+.info small{display:block;color:var(--muted);font-size:9px;letter-spacing:.15em;margin-bottom:7px}
+.info b{font-size:13px;font-weight:600}
+.pill{display:inline-block;border:1px solid #d7c8a8;color:#806b43;border-radius:99px;padding:3px 9px;font-size:10px;margin:3px 3px 0 0}
+.day-head{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:17px}
+.day-head .date{font-family:"Times New Roman",serif;font-size:34px;color:var(--gold)}
+.day-head .dayname{font-size:10px;letter-spacing:.16em;color:var(--muted);text-align:right}
+.timeline{position:relative;margin-left:7px}
+.timeline:before{content:"";position:absolute;left:62px;top:7px;bottom:9px;width:1px;background:#d8d0c1}
+.event{display:grid;grid-template-columns:53px 20px 1fr;gap:9px;position:relative;padding:0 0 19px}
+.time{font-size:11px;font-weight:650;color:#7c806e;padding-top:1px;font-variant-numeric:tabular-nums}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin:5px auto 0;z-index:1;box-shadow:0 0 0 4px var(--cream)}
+.event h3{margin:0;font-size:13px;font-weight:650}
+.event p{margin:3px 0 0;color:var(--muted);font-size:11px;line-height:1.6}
+.transport{font-size:9px;color:#8b7955;letter-spacing:.06em;margin-top:4px}
+.note{background:#eee8dc;border-left:2px solid var(--gold);padding:12px 14px;font-size:11px;color:#655d4e;margin:14px 0}
+.card{background:var(--paper);border:1px solid var(--line);padding:17px;margin:12px 0}
+.card h3{font-size:14px;margin:0 0 8px}
+.card p{font-size:11px;color:var(--muted);margin:4px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--deep);color:white;padding:10px 14px;font-size:11px;letter-spacing:.04em;margin-top:10px}
+.btn.light{background:transparent;color:var(--deep);border:1px solid #b8c0b7}
+.linkrow{display:flex;gap:8px;flex-wrap:wrap}
+.checklist{background:var(--paper);border:1px solid var(--line);padding:15px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #eee9df;font-size:12px}
+.check:last-child{border:0}
+.check input{accent-color:var(--sage);width:17px;height:17px;margin-top:2px;flex:none}
+.check input:checked+span{text-decoration:line-through;color:#9aa19a}
+.footer{background:var(--deep);color:#f7f3e9;text-align:center;padding:35px 20px 42px;margin-top:35px}
+.footer .heart{color:#c69d86;font-size:21px}
+.footer p{font-size:10px;letter-spacing:.13em;color:#c5d0c7}
+.smallprint{font-size:10px;color:var(--muted);line-height:1.7}
+nav{position:sticky;top:0;z-index:10;background:rgba(245,241,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:22px;padding:11px 8px}
+nav a{text-decoration:none;font-size:10px;letter-spacing:.1em;color:#53625b}
+@media(min-width:600px){.hero{min-height:620px;padding:42px 8vw}.hero-main{max-width:600px;margin-left:auto;margin-right:auto;width:100%}main{padding-left:28px;padding-right:28px}.event{grid-template-columns:65px 20px 1fr}.timeline:before{left:74px}.info-grid{gap:14px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="brand">A little journey, just for us</div>
+  <div class="hero-main">
+    <div class="eyebrow">Our first anniversary</div>
+    <h1 class="serif">Hakone<br>Memories</h1>
+    <div class="hero-sub">ふたりで過ごす、特別な2日間。</div>
+  </div>
+  <div class="hero-date"><div><strong>14 — 15</strong><br>NOVEMBER 2026</div><div style="text-align:right">KANAGAWA, JAPAN<br>ONE NIGHT / TWO DAYS</div></div>
+</header>
+<nav>
+  <a href="#overview">OVERVIEW</a><a href="#day1">DAY 01</a><a href="#day2">DAY 02</a><a href="#memo">MEMO</a>
+</nav>
+<main>
+<section id="overview">
+  <div class="section-kicker">The journey</div>
+  <h2>ふたりの箱根旅行</h2>
+  <p class="intro">いつもの毎日から少し離れて、景色を眺めたり、おいしいものを食べたり。ふたりだけの思い出を、ゆっくり重ねる旅。</p>
+  <div class="info-grid">
+    <div class="info"><small>STAY</small><b>仙石原温泉<br>箱根ホテル花月園</b></div>
+    <div class="info"><small>RENT A CAR</small><b>ニコニコレンタカー<br>小田原扇町店</b></div>
+    <div class="info"><small>PICK UP</small><b>11/14（土）10:30</b></div>
+    <div class="info"><small>RETURN</small><b>11/15（日）16:00</b></div>
+  </div>
+  <div style="margin-top:12px"><span class="pill">高速道路なし・一般道</span><span class="pill">レンタカー移動</span><span class="pill">1泊2日</span></div>
+</section>
+
+<section id="day1">
+  <div class="day-head"><div><div class="section-kicker">Day one</div><h2 style="margin-bottom:0">湖と、神社と、火山の景色。</h2></div><div class="date">14<span style="font-size:14px"> SAT</span><div class="dayname">NOVEMBER</div></div></div>
+  <div class="timeline">
+    <div class="event"><div class="time">10:30</div><div class="dot"></div><div><h3>レンタカーを受け取る</h3><p>ニコニコレンタカー 小田原扇町店。駅からの送迎方法は店舗に事前確認。</p><div class="transport">🚗 車</div></div></div>
+    <div class="event"><div class="time">10:45–12:00</div><div class="dot"></div><div><h3>桃源台へドライブ</h3><p>一般道で箱根へ。到着したら桃源台周辺に駐車。</p><div class="transport">🚗 車・一般道</div></div></div>
+    <div class="event"><div class="time">12:00–12:35</div><div class="dot"></div><div><h3>軽めのランチ・乗船準備</h3><p>海賊船の出航時刻を確認して、余裕を持って乗り場へ。</p><div class="transport">徒歩</div></div></div>
+    <div class="event"><div class="time">12:40頃</div><div class="dot"></div><div><h3>芦ノ湖・海賊船クルーズ</h3><p>桃源台港から元箱根方面へ。景色を楽しみながら湖上移動。</p><div class="transport">⛴ 海賊船</div></div></div>
+    <div class="event"><div class="time">13:15–14:15</div><div class="dot"></div><div><h3>箱根神社・平和の鳥居</h3><p>湖畔の鳥居と境内を散策。写真も忘れずに。</p><div class="transport">徒歩</div></div></div>
+    <div class="event"><div class="time">14:15頃</div><div class="dot"></div><div><h3>桃源台へ戻る</h3><p>元箱根港から桃源台行きのバスに乗車。乗り場と発車時刻を現地で確認。</p><div class="transport">🚌 路線バス</div></div></div>
+    <div class="event"><div class="time">15:00頃</div><div class="dot"></div><div><h3>ロープウェイで大涌谷へ</h3><p>火山の景色を眺めながら移動。</p><div class="transport">🚡 箱根ロープウェイ</div></div></div>
+    <div class="event"><div class="time">15:00–15:45</div><div class="dot"></div><div><h3>大涌谷を散策</h3><p>噴煙の景色、黒たまご、おみやげを楽しむ。</p><div class="transport">徒歩</div></div></div>
+    <div class="event"><div class="time">15:45–16:15</div><div class="dot"></div><div><h3>桃源台へ戻る</h3><p>最終便に注意し、乗車前に運行状況を確認。</p><div class="transport">🚡 ロープウェイ</div></div></div>
+    <div class="event"><div class="time">16:15–17:00</div><div class="dot"></div><div><h3>ホテルへ・チェックイン</h3><p>箱根ホテル花月園へ。温泉と夕食、記念日の夜を楽しもう。</p><div class="transport">🚗 車・一般道</div></div></div>
+  </div>
+  <div class="note">時刻は目安です。海賊船・バス・ロープウェイの実際の接続は当日の運行ダイヤで確認してください。遅れたら安全優先で観光内容を調整。</div>
+  <div class="card">
+    <h3>DAY 01 — MAP</h3>
+    <p>小田原扇町店 → 桃源台 → 元箱根港・箱根神社 → 大涌谷 → ホテル花月園</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=ニコニコレンタカー小田原扇町店&destination=箱根ホテル花月園&waypoints=桃源台港%7C箱根神社%7C大涌谷&travelmode=driving">車のルートをGoogleマップで開く ↗</a>
+    <p class="smallprint">海賊船・バス・ロープウェイは別途、現地の案内と時刻表を確認。</p>
+  </div>
+</section>
+
+<section id="day2">
+  <div class="day-head"><div><div class="section-kicker">Day two</div><h2 style="margin-bottom:0">ふたりだけの小さな作品。</h2></div><div class="date">15<span style="font-size:14px"> SUN</span><div class="dayname">NOVEMBER</div></div></div>
+  <div class="timeline">
+    <div class="event"><div class="time">朝</div><div class="dot"></div><div><h3>朝食・温泉・荷造り</h3><p>チェックアウトに向けてゆっくり準備。</p></div></div>
+    <div class="event"><div class="time">11:00</div><div class="dot"></div><div><h3>ホテルチェックアウト</h3><p>忘れ物を確認して強羅へ出発。</p><div class="transport">🚗 車・一般道</div></div></div>
+    <div class="event"><div class="time">11:30–12:10</div><div class="dot"></div><div><h3>強羅周辺で早めのランチ</h3><p>体験前に食事を済ませておく。</p><div class="transport">徒歩</div></div></div>
+    <div class="event"><div class="time">12:10–12:30</div><div class="dot"></div><div><h3>クラフトハウスへ・受付</h3><p>予約内容を確認して受付。</p><div class="transport">徒歩</div></div></div>
+    <div class="event"><div class="time">12:30–14:00</div><div class="dot"></div><div><h3>革小物レーザー彫刻体験</h3><p>箱根クラフトハウス。予約済み・2名。おそろいの思い出を作ろう。</p><div class="transport">✦ 体験予約済み</div></div></div>
+    <div class="event"><div class="time">14:00–15:30</div><div class="dot"></div><div><h3>小田原へ戻る・給油</h3><p>一般道で移動。返却店舗の指定条件に沿って給油。</p><div class="transport">🚗 車・一般道</div></div></div>
+    <div class="event"><div class="time">15:30–16:00</div><div class="dot"></div><div><h3>レンタカー返却</h3><p>小田原扇町店で返却手続き。</p><div class="transport">🚗 車</div></div></div>
+    <div class="event"><div class="time">16:00</div><div class="dot"></div><div><h3>箱根旅行おしまい</h3><p>小田原駅から電車で帰宅。</p><div class="transport">🚃 電車</div></div></div>
+  </div>
+  <div class="note">16:00返却を最優先。14:00には強羅を出発する想定です。渋滞時は寄り道をせず、給油・返却に余裕を持たせてください。</div>
+  <div class="card">
+    <h3>DAY 02 — MAP</h3>
+    <p>箱根ホテル花月園 → 箱根クラフトハウス → 小田原扇町店</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=箱根ホテル花月園&destination=ニコニコレンタカー小田原扇町店&waypoints=箱根クラフトハウス&travelmode=driving">車のルートをGoogleマップで開く ↗</a>
+  </div>
+</section>
+
+<section id="memo">
+  <div class="section-kicker">Before you go</div>
+  <h2>旅のメモ</h2>
+  <div class="card">
+    <h3>予約・基本情報</h3>
+    <p><b>レンタカー</b>　ニコニコレンタカー 小田原扇町店</p>
+    <p>貸出：11/14（土）10:30 ／ 返却：11/15（日）16:00</p>
+    <p><b>宿泊</b>　仙石原温泉 箱根ホテル花月園</p>
+    <p><b>体験</b>　箱根クラフトハウス／11/15（日）12:30・2名</p>
+  </div>
+  <div class="checklist" id="checks">
+    <h3 style="font-size:13px;margin:0 0 7px">持ち物・確認チェック</h3>
+    <label class="check"><input type="checkbox"><span>運転免許証・レンタカー予約情報</span></label>
+    <label class="check"><input type="checkbox"><span>スマートフォン・充電器・モバイルバッテリー</span></label>
+    <label class="check"><input type="checkbox"><span>財布・現金・クレジットカード</span></label>
+    <label class="check"><input type="checkbox"><span>歩きやすい靴・暖かい上着・雨具</span></label>
+    <label class="check"><input type="checkbox"><span>海賊船・ロープウェイの運行状況を確認</span></label>
+    <label class="check"><input type="checkbox"><span>レンタカー店舗に駅送迎の手順を確認</span></label>
+    <label class="check"><input type="checkbox"><span>返却前の給油・指定条件を確認</span></label>
+    <p class="smallprint">チェック状態はこの端末のページ内でのみ保持されます。</p>
+  </div>
+  <div class="card">
+    <h3>立ち寄り先</h3>
+    <div class="linkrow">
+      <a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=桃源台港">桃源台港 ↗</a>
+      <a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=箱根神社">箱根神社 ↗</a>
+      <a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=大涌谷">大涌谷 ↗</a>
+      <a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=箱根ホテル花月園">ホテル ↗</a>
+      <a class="btn light" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=箱根クラフトハウス">クラフトハウス ↗</a>
+    </div>
+  </div>
+  <p class="smallprint">※このサイトは旅行用のしおりです。時刻・運行・道路状況は変更される場合があります。現地の公式案内を優先してください。箱根の山道はカーブや坂が多いため、一般道で安全運転を。</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="heart">♡</div>
+  <div class="serif" style="font-size:25px;margin:8px 0">Our first anniversary</div>
+  <p>HAKONE · NOVEMBER 14–15, 2026</p>
+  <p style="margin-top:20px">ふたりで過ごす、ちょっと特別な2日間。</p>
+</footer>
+</body>
+</html>
